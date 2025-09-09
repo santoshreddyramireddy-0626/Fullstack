@@ -1,0 +1,85 @@
+<html>
+    <head>
+        Project Summary
+    </head>
+    <style>
+    body{
+        margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1e1e2f;
+      color: #faf9f9;
+    }
+        .container{
+            max-width: 900px;
+            margin: 40px auto;
+            background: #ebefe8;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .summary{
+            margin-top: 24px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .summary h2{
+            margin-bottom: 12px;
+            color: #e60505;
+        }
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+            background-color: #e60505;
+        }
+        .card h3{
+            margin-bottom: 12px;
+            color: #06a6e5;
+            background-color: #151414;
+        }
+        .card p{
+            color: #0aea0a;
+            font-size: 50px;
+            line-height: 1.4;
+            box-shadow: 1 50px 4px rgba(41, 7, 7, 0.06);
+            margin:10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+        
+        }
+        @media(max-width:700px){
+            .cards{
+                flex-direction: column;
+            }
+        }
+    </style>
+    <head>
+    <body>
+        <div class="container">
+            <h1>Project Summary</h1>
+            <div class="summary">
+                <h2>Overview</h2>
+                <p>This project aims to redesign the company website to improve user experience and accessibility.</p>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Key Features</h3>
+                    <p>Responsive design, improved navigation, and enhanced performance.</p>
+                </div>
+                <div class="card">
+                    <h3>Timeline</h3>
+                    <p>Project kickoff: oct 2025 - Launch: dec 2025</p>
+                </div>
+                <div class="card">
+                    <h3>Team Members</h3>
+                    <p>suresh,ramesh</p>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
