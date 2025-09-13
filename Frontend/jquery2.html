@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <h1>Task List</h1>
+        <style>
+            button{
+                margin-top:10px;
+                padding:10px;
+                background-color:blue;
+                color:white;
+                border-radius:5px;
+                border:none;
+                cursor:pointer;
+            }
+            body{
+                font-family:sans-serif;
+                background-color:#f4f4f4;
+                padding:20px;
+            }
+           .h1{
+                color:#f8f4f4;
+           }
+           #add{
+            background-color:rgb(70, 103, 70);
+           }
+           ul{
+            background-color: rgb(22, 6, 71);
+            color:aqua;
+           }
+           #myInput{
+            padding:10px;
+            width:200px;
+            border:2px solid #131414;
+            border-radius:5px;
+            color:rgb(5, 5, 5);
+           }
+           #list{
+            padding:20px;
+            margin: 20px;
+           }
+           #add:hover{
+            background-color:rgba(1, 68, 1, 0.985);
+           }
+           .completed{
+            color: gray;
+           }
+           .completedBtn{
+            background-color: green !important;
+           }
+           .pendingBtn{
+            background-color: red !important;
+           }
+        </style>
+    </head>
+    <body>
+        <ul id="list">
+        <h1> Tasks to do</h1>
+        </ul>
+        <input type="text" id="myInput">
+        <button id="add">Add a task</button>
+        <script>
+    $(document).ready(function(){
+        // Add new task with red "Pending" button
+        $("#add").click(function(){
+            let task=$("#myInput").val();
+            if(task){
+                $("#list").append("<li>"+task+" <button class='statusBtn pendingBtn'>Pending</button></li>");
+                $("#myInput").val("");
+            }
+        });
+
+        
+        $("#list").on("click",".statusBtn",function(){
+            let li=$(this).parent();
+            li.toggleClass("completed");
+
+            if(li.hasClass("completed")){
+                $(this).removeClass("pendingBtn").addClass("completedBtn").text("Completed");
+            }else{
+                $(this).removeClass("completedBtn").addClass("pendingBtn").text("Pending");
+            }
+        });
+    });
+</script>
+</body>
+</html>

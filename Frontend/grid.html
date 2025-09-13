@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Grid site</title>
+       <h1> Student Details</h1>
+    </head>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .personal-details {
+            border: 2px solid black;
+            width: 30%;
+            margin-top: 5%;
+            padding: 10px;
+            background-color: rgb(169, 233, 246);
+        }
+        .form{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 10px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        .educational-details {
+            border: 2px solid black;
+            width: 50%;
+            margin-top: 5%;
+            padding: 10px;
+            background-color: rgb(169, 233, 246);
+        }
+        .submit
+        </style>
+    <body>
+        <div class="personal-details">
+            <form class="form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="gender">Gender("Please select the option")</label>
+                <input type="radio" id="male" name="gender" value="Male">Male <br>
+                <input type="radio" id="female" name="gender" value="Female">Female <br>
+                <label for="dob">Date of Birth</label><br>
+                <input type="date" id="dob" name="dob">
+            </form>
+        </div>
+        <div class="educational-details">
+            <form class="form">
+                <div class="table">
+                    <table style="width:100%">
+                        <tr>
+                            <th>Class/Degree</th>
+                            <th>School/College</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>SSC</td>
+                            <td><label for="board"></label><input type="text" id="board" name="board"></td>
+                            <td><label for="percentage"></label><input type="text" id="percentage" name="percentage"></td>
+                            <td><label for="year"></label><input type="text" id="year" name="year"></td>
+                        </tr>
+                        <tr>
+                            <td>Intermideate</td>
+                            <td><label for="board"></label><input type="text" id="board" name="board"></td>
+                            <td><label for="percentage"></label><input type="text" id="percentage" name="percentage"></td>
+                            <td><label for="year"></label><input type="text" id="year" name="year"></td>
+                        </tr>
+                        <tr>
+                            <td>Under Graduation</td>
+                            <td><label for="college"></label><input type="text" id="college" name="college"></td>
+                            <td><label for="percentage"></label><input type="text" id="percentage" name="percentage"></td>
+                            <td><label for="year"></label><input type="text" id="year" name="year"></td>
+                        </tr>
+            </form>
+        </div>
+    </body>
+</html>

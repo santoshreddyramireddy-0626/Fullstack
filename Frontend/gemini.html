@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Registration Form</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #e9ecef;
+            color: #495057;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #2c353d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #6c757d;
+            font-size: 1.1em;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .form-section h2 {
+            color: #343a40;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff0c04;
+            padding-left: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #343a40;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            display: inline;
+            font-weight: 400;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .info-section {
+            background-color: #f8f9fa;
+            border-left: 4px solid #17a2b8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .info-section h3 {
+            color: #17a2b8;
+            margin-top: 0;
+        }
+        
+        .info-section p {
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        .disclaimer {
+            font-size: 0.85em;
+            text-align: center;
+            color: #6c757d;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Voter Registration Form</h1>
+        <p>Register to make your voice heard! It's a fundamental part of a healthy democracy.</p>
+    </header>
+
+    <form action="/submit-form" method="post">
+        
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="">Select...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="non-binary">Non-binary</option>
+                    <option value="other">Prefer not to say</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Contact Information</h2>
+            <div class="form-group">
+                <label for="street">Street Address:</label>
+                <input type="text" id="street" name="street" required placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required placeholder="Anytown">
+            </div>
+            <div class="form-group">
+                <label for="state">State/Province:</label>
+                <input type="text" id="state" name="state" required placeholder="State">
+            </div>
+            <div class="form-group">
+                <label for="zipCode">Zip/Postal Code:</label>
+                <input type="text" id="zipCode" name="zipCode" required placeholder="12345">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890">
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Eligibility and Oath</h2>
+            <div class="form-group radio-group">
+                <p>Are you a citizen of this country?</p>
+                <input type="radio" id="citizenYes" name="citizen" value="yes" required>
+                <label for="citizenYes">Yes</label>
+                <input type="radio" id="citizenNo" name="citizen" value="no" required>
+                <label for="citizenNo">No</label>
+            </div>
+            <div class="form-group radio-group">
+                <p>Have you been convicted of a felony?</p>
+                <input type="radio" id="felonyNo" name="felony" value="no" required>
+                <label for="felonyNo">No</label>
+                <input type="radio" id="felonyYes" name="felony" value="yes" required>
+                <label for="felonyYes">Yes</label>
+            </div>
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="oath" required>
+                    I solemnly swear that the information I have provided is true and accurate. I understand that falsifying information is a crime.
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+    </form>
+
+    <div class="info-section">
+        <h3>Why Register to Vote?</h3>
+        <p>Voter registration is the first step to participating in the democratic process. It gives you the power to choose your leaders, influence public policy, and make your voice heard on issues that matter to you, your family, and your community. Every vote counts!</p>
+    </div>
+
+    <div class="disclaimer">
+        <p>This is a sample form for demonstration purposes only. For official voter registration, please visit your local or national government's election website.</p>
+    </div>
+</div>
+
+</body>
+</html>

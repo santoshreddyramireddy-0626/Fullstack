@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>My jQuery Page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Hello, jQuery!</h1>
+    <h3>Welcome to jQuery</h3>
+    <button id="myButton">Click Me</button>
+    <div class="temp"></div>
+    <p>This is a paragraph.</p>
+    <script>
+        $(document).ready(function(){
+            $("#myButton").hover(function(){
+                $("#myDiv").text("Button Clicked!");
+                $("h1").text("Button Clicked!");
+                $("h3").text("Pressed button");
+                $(".temp").css("background-color", "red");
+                $("p").css("font-weight", "bold");
+            });
+
+
+            $("#add").click(function(){
+                $("ul").append("<li>New Item</li>");
+            });
+        });
+    </script>
+</body>
+</html>
